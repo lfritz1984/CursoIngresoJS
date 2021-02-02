@@ -17,5 +17,4 @@ function mostrarAumento()
 	importeConDescuento = importeSinDescuento - desCuento;
 
 	document.getElementById("txtIdResultado").value = importeConDescuento;
-
 }
