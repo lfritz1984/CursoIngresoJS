@@ -5,7 +5,7 @@ mostrar el resto entre el dividendo y el divisor.
 ej.: "El resto es 0 ."*/
 function SacarResto()
 {
-	let dividendo;
+    let dividendo;
 	let divisor;
 	let resto;
 
