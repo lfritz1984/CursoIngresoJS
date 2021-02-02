@@ -12,6 +12,4 @@ function mostrar()
 
     //copio en nombre que tengo guardado en la variable nombre dentro de la caja de texto embebida en la pagina html
 	document.getElementById("txtIdNombre").value = nombre; 
-
-	alert(nombre);
 }
