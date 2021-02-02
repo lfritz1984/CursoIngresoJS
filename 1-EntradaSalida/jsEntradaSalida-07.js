@@ -3,71 +3,74 @@ Debemos lograr tomar Los numeros por ID ,
 transformarlos a enteros (parseInt),realizar la operación correcta y 
 mostrar el resulto por medio de "ALERT"
 ej.: "la Resta es 750"*/ 
+
+// Leonel Fritz dvisión H1
+
 function sumar()
 {	
-	let num1;
-	let num2;
+	let sumando1;
+	let sumando2;
 	let resultado
 
-	num1 = document.getElementById("txtIdNumeroUno").value;
-	num2 = document.getElementById("txtIdNumeroDos").value;
+	sumando1 = document.getElementById("txtIdNumeroUno").value;
+	sumando2 = document.getElementById("txtIdNumeroDos").value;
 
-	num1 = parseFloat(num1);
-	num2 = parseFloat(num2);
+	sumando1 = parseInt(sumando1);
+	sumando2 = parseInt(sumando2);
 
-	resultado = num1 + num2;
+	suma = sumando1 + sumando2;
 
-	alert("La suma es " + resultado);	
+	alert("La suma es " + suma);	
 }
 
 function restar()
 {
-	let num1;
-	let num2;
-	let resultado
+	let minuendo;
+	let sustraendo;
+	let diferencia
 
-	num1 = document.getElementById("txtIdNumeroUno").value;
-	num2 = document.getElementById("txtIdNumeroDos").value;
+	minuendo = document.getElementById("txtIdNumeroUno").value;
+	sustraendo = document.getElementById("txtIdNumeroDos").value;
 
-	num1 = parseFloat(num1);
-	num2 = parseFloat(num2);
+	minuendo = parseInt(minuendo);
+	sustraendo = parseInt(sustraendo);
 
-	resultado = num1 - num2;
+	diferencia = minuendo - sustraendo;
 
-	alert("La resta es " + resultado);	
+	alert("La diferencia es " + diferencia);	
 }
 
 function multiplicar()
 { 
-	let num1;
-	let num2;
-	let resultado
+	let multiplicando;
+	let multiplicador;
+	let producto
 
-	num1 = document.getElementById("txtIdNumeroUno").value;
-	num2 = document.getElementById("txtIdNumeroDos").value;
+	multiplicando = document.getElementById("txtIdNumeroUno").value;
+	multiplicador = document.getElementById("txtIdNumeroDos").value;
 
-	num1 = parseFloat(num1);
-	num2 = parseFloat(num2);
+	multiplicando = parseInt(multiplicando);
+	multiplicador = parseInt(multiplicador);
 
-	resultado = num1 * num2;
+	producto = multiplicando * multiplicador;
 
-	alert("La multiplicación es " + resultado);	
+	alert("El producto es " + producto);	
 }
 
 function dividir()
 {
-	let num1;
-	let num2;
-	let resultado
+	let Dividendo;
+	let Divisor;
+	let Cociente;
 
-	num1 = document.getElementById("txtIdNumeroUno").value;
-	num2 = document.getElementById("txtIdNumeroDos").value;
+	Dividendo = document.getElementById("txtIdNumeroUno").value;
+	Divisor= document.getElementById("txtIdNumeroDos").value;
 
-	num1 = parseFloat(num1);
-	num2 = parseFloat(num2);
+	Dividendo = parseInt(Dividendo);
+	Divisor = parseInt(Divisor);
 
-	resultado = num1 / num2;
+	Cociente = Dividendo / Divisor;
 
-	alert("La división es " + resultado);
+	alert("El cociente es " + Cociente);
 }
 
