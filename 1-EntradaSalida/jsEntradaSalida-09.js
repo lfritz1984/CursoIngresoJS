@@ -11,7 +11,9 @@ function mostrarAumento()
 	//para calcular el nuevo sueldo deberia sumarle al sueldo original el aumento
 	// el calculo de porcentaje de un valor: lo consigo multiplicando el valor por el porcentaje y lo dovido por 100.
 
-	sueldo = parseFloat(document.getElementById("txtIdSueldo").value);
+	sueldo = document.getElementById("txtIdSueldo").value;
+	sueldo = parseFloat(sueldo);
+
 	aumento = sueldo * .1; // .1 es equivalente a 0.10 y 0.10 es lo ismo que 10 / 100
     nuevoSueldo = sueldo + aumento;
 

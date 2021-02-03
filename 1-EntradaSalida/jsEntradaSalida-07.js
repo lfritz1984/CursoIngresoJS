@@ -70,7 +70,8 @@ function dividir()
 	Divisor = parseInt(Divisor);
 
 	Cociente = Dividendo / Divisor;
-
+	//Cociente = Cociente.toFixed(2); //reduce a do decimales el resultado.
+	
 	alert("El cociente es " + Cociente);
 }
 
