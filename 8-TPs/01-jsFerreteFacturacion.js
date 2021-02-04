@@ -28,6 +28,7 @@ function Promedio ()
     let proDucto01;
     let proDucto02;
     let proDucto03;
+    let suma;
     let Promedio;
 
     proDucto01 = document.getElementById("txtIdPrecioUno").value;
@@ -38,7 +39,8 @@ function Promedio ()
     proDucto02 = parseFloat(proDucto02);
     proDucto03 = parseFloat(proDucto03);
 
-    Promedio = (proDucto01 + proDucto02 + proDucto03) / 3;
+    suma = proDucto01 + proDucto02 + proDucto03;
+    Promedio = suma / 3;
     Promedio = Promedio.toFixed(2);
 
     alert("El promedio de sus productos es: " + Promedio);
@@ -49,6 +51,7 @@ function PrecioFinal ()
     let sinIVA02;
     let sinIVA03;
     let sumaparcial;
+    let IVA;
     let precioFinal;
 
     sinIVA01 = document.getElementById("txtIdPrecioUno").value;
@@ -60,7 +63,8 @@ function PrecioFinal ()
     sinIVA03 = parseFloat(sinIVA03);
 
     sumaparcial = sinIVA01 + sinIVA02 + sinIVA03;
-    precioFinal = (sumaparcial * 21 / 100) + sumaparcial;
+    IVA = sumaparcial * 21 /100;
+    precioFinal = sumaparcial + IVA;
     precioFinal = precioFinal.toFixed(2);
 
     alert("Su precio consumidor final es: " + precioFinal);

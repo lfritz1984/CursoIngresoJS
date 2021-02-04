@@ -8,23 +8,25 @@ function Rectangulo ()
 {
     let largo;
     let ancho;
+    let perimetro;
     let hilos3;
-    let alambre;
+    let alambre1;
 
     largo = document.getElementById("txtIdLargo").value;
     ancho = document.getElementById("txtIdAncho").value;
-    hilos3 = 3;
-
     largo = parseFloat(largo);
     ancho = parseFloat(ancho);
 
-    largo = (largo * 2) * hilos3;
-    ancho = (ancho * 2) * hilos3;
+    largo = 2 * largo;
+    ancho = 2 * ancho;
+    hilos3 = 3;
 
-    alambre = largo + ancho;
-    alambre = alambre.toFixed(2);
+    perimetro = largo + ancho;
 
-    alert("La cantidad de metros a comprar de alambre son: " + alambre);  
+    alambre1 = perimetro * hilos3;
+    alambre1 = alambre1.toFixed(2);
+
+    alert("La cantidad de metros a comprar de alambre son: " + alambre1);  
 
     document.getElementById("txtIdLargo").value = "";
     document.getElementById("txtIdAncho").value = "";
@@ -32,17 +34,21 @@ function Rectangulo ()
 function Circulo () 
 {
     let radio;
+    const PI = Math.PI;
     let hilos3;
-    let longitud;
+    let perimetro2;
+    let Totalambre;
 
     radio = document.getElementById("txtIdRadio").value;
-    hilos3 = 3;
     radio = parseFloat(radio);
+    hilos3 = 3;
 
-    longitud = (2 * 3.14 * radio) * hilos3;
-    longitud = longitud.toFixed(2);
+    perimetro2 = 2 * PI * radio;
 
-    alert("La cantidad de metros a comprar de alambre son: " + longitud);
+    Totalambre = perimetro2 * hilos3;
+    Totalambre = Totalambre.toFixed(2);
+
+    alert("La cantidad de metros a comprar de alambre son: " + Totalambre);
 
     document.getElementById("txtIdRadio").value = "";
 }
@@ -50,8 +56,8 @@ function Materiales ()
 {
     let largo2;
     let ancho2;
-    let cemento;
-    let cal;
+    const cemento = 2;
+    const cal = 3;
     let m2;
     let totalcem;
     let totalcal;
@@ -60,10 +66,8 @@ function Materiales ()
     ancho2 = document.getElementById("txtIdAncho").value;
     largo2 = parseInt(largo2);
     ancho2 = parseInt(ancho2);
-    cemento = 2;
-    cal = 3;
+    
     m2 = largo2 * ancho2;
-
     totalcem = cemento * m2;
     totalcal = cal * m2;
 
