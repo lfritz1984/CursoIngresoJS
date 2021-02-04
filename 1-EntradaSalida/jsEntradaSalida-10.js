@@ -6,7 +6,7 @@ en el cuadro de texto "RESULTADO"*/
 
 // Leonel Fritz División H1
 
-function mostrarAumento()
+function mostrarDescuento()
 {
 	let importeSinDescuento;
 	let importeConDescuento;
