@@ -71,7 +71,7 @@ function Materiales ()
     totalcem = cemento * m2;
     totalcal = cal * m2;
 
-    alert("Usted necesita " + totalcem + " bolsas de cemento y " + totalcal + " bolsas de cal");
+    alert("Usted necesita para un contrapiso de " + m2 + " m2, unas " + totalcem + " bolsas de cemento y unas " + totalcal + " bolsas de cal.");
 
     document.getElementById("txtIdLargo").value = "";
     document.getElementById("txtIdAncho").value = "";
