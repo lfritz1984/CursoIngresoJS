@@ -7,6 +7,8 @@ function SacarResto()
 {
     let dividendo;
 	let divisor;
+	let suma;
+	let promedio;
 	let resto;
 
 	dividendo = document.getElementById("txtIdNumeroDividendo").value;
@@ -15,7 +17,11 @@ function SacarResto()
 	dividendo = parseInt(dividendo);
 	divisor = parseInt(divisor);
 
-	resto = dividendo % divisor;
+    suma = dividendo + divisor;
+	promedio = suma / 2;
+    resto = dividendo % divisor;
 
-	alert("El resto es " + resto);
+	console.log("La suma es: " + suma);
+	console.log("El promedio es: " + promedio);
+	console.log("El modulo de los numeros es: " + resto);
 }

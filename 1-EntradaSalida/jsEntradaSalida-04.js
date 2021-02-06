@@ -1,15 +1,23 @@
-/* 
-Debemos lograr tomar un dato por 'PROMPT' 
-y lo muestro por 'ID' al presionar el botón 'mostrar'
-*/
+/*
+Division 1H
+Alumno: Leonel Guillermo Fritz
+
+1. Ingresar descripción (por prompt) y precio de un producto (por id).
+El programa deberá mostrar por alert la descripción del producto junto al precio aumentado en un 30%. Pueden utilizar el html del ejercicio 4 para resolverlo.*/
+
 function mostrar()
 {
-	//reservo el espacio en memoria para guardar el nombre del usuario (variable)
-	let nombre; 
+	let descripcion; 
+	let precio;
+	let aumento;
+	let precioFinal;
 
-    //guardo en la variable nombre el texto que escribo en usuario dentro de la entana prompt
-	nombre = prompt("Ingrese su nombre"); 
+	precio = document.getElementById("txtIdNombre").value;
+	descripcion = prompt("Ingrese el producto");
+    precio = parseFloat(precio);
 
-    //copio en nombre que tengo guardado en la variable nombre dentro de la caja de texto embebida en la pagina html
-	document.getElementById("txtIdNombre").value = nombre; 
+	aumento = precio * 30 / 100;
+	precioFinal = precio + aumento;
+
+	alert("Su producto " + descripcion + " ya le agregamos un 30 % de aumento, quedando asi con un precio final de: " + precioFinal + ".");
 }
