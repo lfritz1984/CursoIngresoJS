@@ -1,6 +1,20 @@
 function mostrar()
 {
-	//tomo la edad  
-	alert("ok");
+	let edad;
 
-}//FIN DE LA FUNCIÓN
+	edad = parseInt(document.getElementById("txtIdEdad").value);
+
+	// forma dentro del rango
+	/*if (edad < 13 || edad > 17) {
+
+	 alert("Usted no es un adolescente");
+
+	}*/
+
+	//forma fuera del rango
+	if ( ! (edad >= 13 && edad <= 17) ) {
+
+		alert("No es adolescente");
+	}
+   
+}
