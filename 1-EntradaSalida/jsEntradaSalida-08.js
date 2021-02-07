@@ -1,8 +1,15 @@
 /*
-Debemos lograr tomar Los numeros por ID ,
-transformarlos a enteros (parseInt),realizar la operación correcta y 
-mostrar el resto entre el dividendo y el divisor.
-ej.: "El resto es 0 ."*/
+División 1H
+Alumno Leonel Guillermo Fritz
+
+3 - Ingresar dos numeros por id
+Se pide:
+mostrar por console.log:
+a) La suma de los dos numeros
+b) El promedio de los numeros.
+c) El modulo de los numeros (el primero en modulo del segundo)
+
+UTILIZAR EL EJERCICIO 8 para resolverlo*/
 function SacarResto()
 {
     let dividendo;
