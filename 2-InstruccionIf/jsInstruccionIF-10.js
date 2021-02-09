@@ -12,6 +12,7 @@ function mostrar()
 	let maximo = 10
 
 	numero = Math.round(Math.random() * ( maximo - minimo ) + minimo);
+	console.log("Su nota es un: " + numero);
 
 	if ( numero > 8)
 	{

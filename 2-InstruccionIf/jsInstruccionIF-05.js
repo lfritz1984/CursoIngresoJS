@@ -12,9 +12,11 @@ function mostrar()
 	}*/
 
 	//forma fuera del rango
-	if ( ! (edad >= 13 && edad <= 17) ) {
+	if ( ! (edad > 12 && edad < 18) ) 
+	{
 
-		alert("No es adolescente");
+      alert("No es adolescente");
+
 	}
    
 }
