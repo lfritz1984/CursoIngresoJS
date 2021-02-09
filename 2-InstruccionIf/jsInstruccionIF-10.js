@@ -7,21 +7,20 @@ Al presionar el Botón, asignar una nota RANDOM al examen y mostrar:
 function mostrar()
 {
 
-	let numero;
-	let minimo = 1
-	let maximo = 10
+	let nota;
+	
+	//nota = Math.round(Math.random() * ( maximo - minimo ) + minimo);
+	nota = Math.round(Math.random() * 9 + 1 ); // es lo mismo que la linea 14
+	console.log("Su nota es un: " + nota);
 
-	numero = Math.round(Math.random() * ( maximo - minimo ) + minimo);
-	console.log("Su nota es un: " + numero);
-
-	if ( numero > 8)
+	if ( nota > 8)
 	{
        alert("EXCELENTE");
 	}
 
 	else
 	{
-		if ( numero > 3 && numero < 9 )
+		if ( nota > 3 && nota < 9 )
 		{
 			alert("APROBO");
 		}
