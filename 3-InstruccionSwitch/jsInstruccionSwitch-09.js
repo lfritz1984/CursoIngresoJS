@@ -9,5 +9,45 @@ en Otoño y Primavera: bariloche tiene un aumento del 10% cataratas tiene un aum
 
 function mostrar()
 {
+    let baseEstadia;
+    let estacion;
+    let destino;
+    let precioFinal;
 
+    baseEstadia = 15000;
+    estacion = document.getElementById("txtIdEstacion").value;
+    destino = document.getElementById("txtIdDestino").value;
+
+    switch (estacion && destino)
+    { 
+        case "Invierno" && "Bariloche":
+            precioFinal = baseEstadia * 1.2;
+            alert("Su precio final es: " + precioFinal + " pesos.");
+            break;
+ 
+        case "Invierno" && "Cordoba":
+            precioFinal = baseEstadia * 0.9;
+            alert("Su precio final es: " + precioFinal + " pesos.");
+            break;
+            
+        case "Invierno" && "Cataratas":
+             precioFinal = baseEstadia * 0.9;
+             alert("Su precio final es: " + precioFinal + " pesos.");
+            break;      
+        
+        case "Invierno" && "Mar del plata":
+            precioFinal = baseEstadia * 0.8;
+            alert("Su precio final es: " + precioFinal + " pesos.");
+            break;
+
+        case "Verano" && "Bariloche":
+            precioFinal = baseEstadia * 0.8;
+            alert("Su precio final es: " + precioFinal + " pesos.");
+            break;
+        
+        case "Verano" && "Mar del plata":
+            precioFinal = baseEstadia * 1.2;
+            alert("Su precio final es: " + precioFinal + " pesos.");
+            break;
+    }   
 }
