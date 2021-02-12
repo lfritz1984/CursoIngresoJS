@@ -11,5 +11,16 @@ primavera: solo no se viaja a Bariloche*/
 
 function mostrar()
 {
+    let estacion;
+    let destino;
 
+    estacion = document.getElementById("txtIdEstacion").value;
+    destino = document.getElementById("txtIdDestino").value;
+
+    switch(estacion)
+    {
+        case "Invierno":
+            alert("Se viaje");
+        default:
+    }
 }
