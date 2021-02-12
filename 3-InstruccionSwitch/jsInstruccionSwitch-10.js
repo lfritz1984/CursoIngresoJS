@@ -20,7 +20,51 @@ function mostrar()
     switch(estacion)
     {
         case "Invierno":
-            alert("Se viaje");
-        default:
+            switch(destino)
+            {
+                case "Bariloche":
+                alert("Se Viaja");
+                break;
+
+                default:
+                alert("No se Viaja");
+                break;
+            }
+        break;
+
+        case "Verano":
+            switch(destino)
+            {
+                case "Mar del plata":
+                case "Cataratas":
+                alert("Se Viaja");
+                break;
+                
+                default:
+                alert("No se Viaja");
+                break;    
+            }
+        break;
+
+        case "Otoño":
+            switch(destino)
+            {
+                default:         
+                alert("Se Viaja");
+                break;    
+            }
+        break;
+        
+        case "Primavera":
+            switch(destino)
+            {
+                case "Bariloche":
+                alert("No se Viaja");
+                break;
+                
+                default:
+                alert("Se Viaja");
+                break;    
+            }
     }
 }

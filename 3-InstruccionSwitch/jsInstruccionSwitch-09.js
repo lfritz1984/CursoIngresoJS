@@ -37,6 +37,8 @@ function mostrar()
                 alert("Su precio final es: " + precioFinal + " pesos.");
                 break;    
         }
+     break;
+
      case "Verano":
         switch(destino)
         {
@@ -53,7 +55,9 @@ function mostrar()
                 precioFinal = baseEstadia * 1.20;
                 alert("Su precio final es: " + precioFinal + " pesos.");
                 break;          
-        }  
+        }
+     break;
+
      case "Otoño":
      case "Primavera":
         switch(destino)
@@ -67,6 +71,7 @@ function mostrar()
             case "Cordoba":
                 alert("Su precio final es: " + baseEstadia + " pesos.");
                 break;    
-        }     
+        }
+     break;        
     }
 }
