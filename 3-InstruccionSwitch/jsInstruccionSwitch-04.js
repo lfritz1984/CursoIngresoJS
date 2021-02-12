@@ -26,5 +26,4 @@ function mostrar()
 		default:
 			alert("Este mes tiene 31 días.");	
 	}
-	
 }

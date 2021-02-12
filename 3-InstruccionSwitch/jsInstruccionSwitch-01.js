@@ -18,7 +18,5 @@ function mostrar()
 		case "Diciembre":
 			alert("Felices fiestas.!!!");
 			break;		
-	}
-
-	
+	}	
 }

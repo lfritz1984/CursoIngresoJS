@@ -18,36 +18,55 @@ function mostrar()
     estacion = document.getElementById("txtIdEstacion").value;
     destino = document.getElementById("txtIdDestino").value;
 
-    switch (estacion && destino)
-    { 
-        case "Invierno" && "Bariloche":
-            precioFinal = baseEstadia * 1.2;
-            alert("Su precio final es: " + precioFinal + " pesos.");
-            break;
- 
-        case "Invierno" && "Cordoba":
-            precioFinal = baseEstadia * 0.9;
-            alert("Su precio final es: " + precioFinal + " pesos.");
-            break;
-            
-        case "Invierno" && "Cataratas":
-             precioFinal = baseEstadia * 0.9;
-             alert("Su precio final es: " + precioFinal + " pesos.");
-            break;      
-        
-        case "Invierno" && "Mar del plata":
-            precioFinal = baseEstadia * 0.8;
-            alert("Su precio final es: " + precioFinal + " pesos.");
-            break;
-
-        case "Verano" && "Bariloche":
-            precioFinal = baseEstadia * 0.8;
-            alert("Su precio final es: " + precioFinal + " pesos.");
-            break;
-        
-        case "Verano" && "Mar del plata":
-            precioFinal = baseEstadia * 1.2;
-            alert("Su precio final es: " + precioFinal + " pesos.");
-            break;
-    }   
+    switch (estacion)
+    {
+     case "Invierno":
+        switch (destino)
+        {
+            case "Bariloche":
+                precioFinal = baseEstadia * 1.2;
+                alert("Su precio final es: " + precioFinal + " pesos.");
+                break;
+            case "Cataratas":
+            case "Cordoba":
+                precioFinal = baseEstadia * 0.9;
+                alert("Su precio final es: " + precioFinal + " pesos.");
+                break;
+            case "Mar del plata":
+                precioFinal = baseEstadia * 0.8;
+                alert("Su precio final es: " + precioFinal + " pesos.");
+                break;    
+        }
+     case "Verano":
+        switch(destino)
+        {
+            case "Bariloche":
+                precioFinal = baseEstadia * 0.8;
+                alert("Su precio final es: " + precioFinal + " pesos.");
+                break;
+            case "Cataratas":
+            case "Cordoba":
+                precioFinal = baseEstadia * 1.1;
+                alert("Su precio final es: " + precioFinal + " pesos.");
+                break; 
+            case "Mar del plata":
+                precioFinal = baseEstadia * 1.20;
+                alert("Su precio final es: " + precioFinal + " pesos.");
+                break;          
+        }  
+     case "Otoño":
+     case "Primavera":
+        switch(destino)
+        {
+            case "Bariloche":
+            case "Cataratas":
+            case "Mar del plata":        
+                precioFinal = baseEstadia * 1.1;
+                alert("Su precio final es: " + precioFinal + " pesos.");
+                break;
+            case "Cordoba":
+                alert("Su precio final es: " + baseEstadia + " pesos.");
+                break;    
+        }     
+    }
 }

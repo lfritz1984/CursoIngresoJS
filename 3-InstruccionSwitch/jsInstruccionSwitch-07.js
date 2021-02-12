@@ -17,8 +17,6 @@ function mostrar()
         case "Cataratas":
         case "Mar del plata":
             alert("Este destino se encuentra en el Este de Argentina");
-            break;        
-                
+            break;                   
     }
-
 }

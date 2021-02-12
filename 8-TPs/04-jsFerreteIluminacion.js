@@ -17,7 +17,6 @@ function CalcularPrecio ()
     let descuento;
     let precioConDescuento;
     let iibb;
-    let precioConiibb;
     
     cantidad = document.getElementById("txtIdCantidad").value;
     cantidad = parseInt(cantidad);
@@ -79,12 +78,13 @@ function CalcularPrecio ()
               
     }
     precioConDescuento = precioSinDescuento - (precioSinDescuento * descuento / 100);
-    document.getElementById("txtIdprecioDescuento").value = precioConDescuento;
-    iibb = precioConDescuento * 10 /100;
-    precioConiibb = precioConDescuento + iibb
 
     if (precioConDescuento > 120)
     {
-        alert("IIBB Usted pago " + precioConiibb + ", siendo " + iibb + " el impuesto que se pagó.");
+        iibb = precioConDescuento * 10 /100;
+        precioConDescuento = precioConDescuento + iibb;
+        alert("IIBB Usted pago " + precioConDescuento + ", siendo " + iibb + " el impuesto que se pagó.");
     }
+
+    document.getElementById("txtIdprecioDescuento").value = precioConDescuento;
 }

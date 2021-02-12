@@ -34,5 +34,4 @@ function mostrar()
 			alert("Ya pasamos el frio, ahora calor!!!");
 			break;										
 	}
-
 }
