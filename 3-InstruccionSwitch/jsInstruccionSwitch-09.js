@@ -92,23 +92,39 @@ function mostrar()
             {
                 descuento = 0.8;
             }
-        }
-    }
-    if(estacion == "Verano")
-    {
-        descuento = 0.8;
+        }      
     }
     else
     {
-        if(destino == "Mar del plata")
+        if (estacion == "Verano")
         {
-            descuento = 1.20;
+            if(destino == "Bariloche")
+            {
+                descuento = 0.8;
+            }
+            else
+            {
+                if(destino == "Cataratas" || destino == "Cordoba")
+                {
+                    descuento = 1.10;
+                }
+                else
+                {
+                    descuento = 1.20;
+                }
+            }
         }
         else
         {
-            descuento = 1.1;
-        } 
-            
+            if(destino == "Cordoba")
+            {
+                descuento = 1;
+            }
+            else
+            {
+                descuento = 1.10;
+            }
+        }    
     }
 
     precioFinal = baseEstadia * descuento;
