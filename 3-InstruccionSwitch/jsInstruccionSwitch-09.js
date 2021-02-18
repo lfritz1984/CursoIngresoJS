@@ -12,13 +12,14 @@ function mostrar()
     let baseEstadia;
     let estacion;
     let destino;
+    let descuento;
     let precioFinal;
 
     baseEstadia = 15000;
     estacion = document.getElementById("txtIdEstacion").value;
     destino = document.getElementById("txtIdDestino").value;
 
-    switch (estacion)
+    /*switch (estacion)
     {
      case "Invierno":
         switch (destino)
@@ -73,5 +74,43 @@ function mostrar()
                 break;    
         }
      break;        
+    }*/
+
+    if(estacion == "Invierno")
+    {
+        if(destino == "Bariloche")
+        {
+            descuento = 1.2;
+        }
+        else
+        {
+            if(destino == "Cataratas" || destino == "Cordoba")
+            {
+                descuento = 0.9;
+            }
+            else
+            {
+                descuento = 0.8;
+            }
+        }
     }
-}
+    if(estacion == "Verano")
+    {
+        descuento = 0.8;
+    }
+    else
+    {
+        if(destino == "Mar del plata")
+        {
+            descuento = 1.20;
+        }
+        else
+        {
+            descuento = 1.1;
+        } 
+            
+    }
+
+    precioFinal = baseEstadia * descuento;
+    alert("Su precio final es: " + precioFinal + " pesos.");
+} 

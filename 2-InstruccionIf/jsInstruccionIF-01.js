@@ -1,17 +1,46 @@
 function mostrar()
 {
-	let edad;
+	let distancia;
+	let tiempo;
+	let velocidad;
 
-	edad = document.getElementById("txtIdEdad").value;
-	edad = parseInt(edad);
+	distancia = document.getElementById("txtIdEdad").value;
+	distancia = parseInt(distancia);
 
-	if( edad == 15 ) // true (cualquier valor que no sea 0) o false (0)
+	tiempo = prompt("Ingrese el tiempo que tardo");
+	tiempo = parseFloat(tiempo);
+
+	velocidad = distancia / tiempo;
+
+	if(velocidad <= 60) // true (cualquier valor que no sea 0) o false (0)
 	{
-   
-		alert("Niña bonita");
-
+		alert("Muy lento");
+    }
+	else
+	{
+		if(velocidad <= 80)
+		{
+			alert("Lento");
+		}
+		else
+		{
+			if(velocidad <= 100)
+			{
+				alert("Buen ritmo");
+			}
+			else
+			{
+				if(velocidad <= 120)
+				{
+					alert("Ahi de la ley");
+				}
+				else
+				{
+					alert("Eso no se hace");
+				}
+			}
+		}
 	}
-    alert("Fin dela de la Función");
 }
 //
 /*
