@@ -88,3 +88,47 @@ function CalcularPrecio ()
 
     document.getElementById("txtIdprecioDescuento").value = precioConDescuento;
 }
+/*
+function CalcularSuma()
+{
+    let numero1;
+    let numero2;
+    let numero3;
+    let numero4;
+    let numero5;
+    let numero6;
+    let numero7;
+    let numero8;
+    let numero9;
+    let numero10;
+
+    let total;
+
+    numero1 = prompt("Ingrese el numero1");
+    numero2 = prompt("Ingrese el numero2");
+    numero3 = prompt("Ingrese el numero3");
+    numero4 = prompt("Ingrese el numero4");
+    numero5 = prompt("Ingrese el numero5");
+    numero6 = prompt("Ingrese el numero6");
+    numero7 = prompt("Ingrese el numero7");
+    numero8 = prompt("Ingrese el numero8");
+    numero9 = prompt("Ingrese el numero9");
+    numero10 = prompt("Ingrese el numero10");
+
+
+    numero1 = parseFloat(numero1);
+    numero2 = parseFloat(numero2);
+    numero3 = parseFloat(numero3);
+    numero4 = parseFloat(numero4);
+    numero5 = parseFloat(numero5);
+    numero6 = parseFloat(numero6);
+    numero7 = parseFloat(numero7);
+    numero8 = parseFloat(numero8);
+    numero9 = parseFloat(numero9);
+    numero10 = parseFloat(numero10);
+
+    total = numero1 + numero2 + numero3 + numero4 + numero5 + numero6 + numero7 + numero8 + numero9 + numero10;
+
+    alert("La suma es: " + total);
+}
+*/
