@@ -8,16 +8,17 @@ function mostrar()
 	claveIngresada = prompt("ingrese la clave.");
 	i = 1
 
-	while (claveIngresada != "utn750" || i < 3 )
+	while (claveIngresada != "utn750" && i < 3)
 	{
 		claveIngresada = prompt("Error, ingrese nuevamente la clave.");
-		i = i + i;
+		i = i + 1;
 	}
 	if(i == 3)
 	{
 		alert("Usted fue bloqueado");
 	}
-
-	alert("Usted ingreso al sistema");
-
+	else
+	{
+		alert("Usted ingreso al sistema");
+	}
 }//FIN DE LA FUNCIÓN
