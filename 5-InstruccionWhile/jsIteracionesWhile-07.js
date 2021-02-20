@@ -17,11 +17,12 @@ function mostrar()
 	{
 		numeroIngresado = prompt("Ingrese un numero");
 		numeroIngresado = parseInt(numeroIngresado);
+		acumulador = acumulador + numeroIngresado;
+		contador = contador + 1;
+
 		respuesta = prompt("Si quiere continuar ingresando numeros, responda con si o no.");
 		respuesta = respuesta.toLocaleLowerCase();
 
-		acumulador = acumulador + numeroIngresado;
-		contador = contador + 1;
 	}
 
 	document.getElementById("txtIdSuma").value = acumulador;
