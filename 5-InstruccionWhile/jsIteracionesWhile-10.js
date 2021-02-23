@@ -13,14 +13,22 @@ hasta que el usuario quiera, mostrar:
 function mostrar()
 {
 	//declarar contadores y variables 
-	var respuesta;
-	var numeroIngresado;
-	var sumaNegativos=0;
+	let respuesta;
+	let numeroIngresado;
+	let sumaNegativos = 0;
+	let sumaPositivos = 0;
+	let contadorDePositivos;
+	let contadorDeNegativos;
+	let contadorDeCeros;
+	let contadorDenumerosPares;
+	let promedioDePositivos;
+	let promedioDeNegativos;
 
 	respuesta="si";
 
 	while(respuesta=="si")
 	{
+		numeroIngresado = prompt("Ingrese un numero");
 		
 		respuesta=prompt("desea continuar?");
 	}//fin del while

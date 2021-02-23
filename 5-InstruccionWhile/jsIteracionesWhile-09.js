@@ -20,27 +20,33 @@ function mostrar()
 	{
 		numeroIngresado = prompt("Ingrese un numero");
 		numeroIngresado = parseInt(numeroIngresado);
-
+	
 		if(numeroIngresado < 0)
 		{
-			if(banderaDelPrimerNegativo|| numeroIngresado % 2 == 0)
+			if(banderaDelPrimerNegativo == true || numeroIngresado > mayorNegativo)
 			{
-
+				mayorNegativo = numeroIngresado;
+				banderaDelPrimerNegativo = false;
+			}	
+		}
+		if(banderaDelPrimerPar == true || numeroIngresado < menorPar)
+		{
+			if(numeroIngresado % 2 == 0)
+			{
+				menorPar = numeroIngresado;
+			    banderaDelPrimerPar = false;
 			}
 		}
-		
-		
 		respuesta = prompt("desea continuar ingresando numeros? si/no");
 		respuesta = respuesta.toLocaleLowerCase();
 	}
-	
 	document.getElementById("txtIdMaximo").value = mayorNegativo;
 	document.getElementById("txtIdMinimo").value = menorPar;
-
 }
+/*
 		
 
-        /*if(banderaDelPrimero == "es el primero" )
+        if(banderaDelPrimero == "es el primero" )
 		{
 			numeroMaximo = numeroIngresado;
 			numeroMinimo = numeroIngresado;
@@ -105,5 +111,5 @@ function mostrar()
 	
 	document.getElementById("txtIdMaximo").value = numeroMaximo;
 	document.getElementById("txtIdMinimo").value = numeroMinimo;
-}*/
-}//FIN DE LA FUNCIÓN*/
+}
+}*///FIN DE LA FUNCIÓN*/
