@@ -1,6 +1,5 @@
 /*
 Enunciado:
-
 Debemos realizar la carga de 5(cinco) productos de prevención de contagio,
 de cada una debo obtener los siguientes datos:
 el tipo (validar "barbijo" , "jabón" o "alcohol") ,
@@ -11,6 +10,9 @@ Se debe Informar al usuario lo siguiente:
 a) Del más barato de los alcohol, la cantidad de unidades y el fabricante
 b) Del tipo con mas unidades, el promedio por compra
 c) Cuántas unidades de jabones hay en total
+Ejercicio 1 del parcial 2020
+Alumno Leonel Guillermo Fritz
+División 1H
 */
 function mostrar()
 {
@@ -106,13 +108,13 @@ function mostrar()
 	}
 	
     //b) Del tipo con mas unidades, el promedio por compra
-	if(acumuladorAlcohol > (acumuladorBarbijos && acumuladorJabones))
+	if(acumuladorAlcohol > acumuladorBarbijos && acumuladorAlcohol > acumuladorJabones)
 	{
 		promedioCompra = acumuladorAlcohol / contadorAlcohol;
 	}
 	else
 	{
-		if(acumuladorBarbijos >= (acumuladorAlcohol && acumuladorJabones))
+		if(acumuladorBarbijos > acumuladorJabones && acumuladorBarbijos >= acumuladorAlcohol)
 		{
 			promedioCompra = acumuladorBarbijos / contadorBarbijos;
 		}
