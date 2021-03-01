@@ -1,3 +1,15 @@
+/*Realizar el algoritmo que permita ingresar los datos de una compra productos de la construccion, hasta que el cliente quiera:
+Tipo validad("arena";"cal";"cemento")
+Cantidad de bolsas,
+Precio por bolsa (más de cero ),
+
+X) Si compro más de 10 bolsas en total tenes 15% de descuento sobre el total a pagar. 
+X) Si compro más de 30 bolsas en total tenes 25% de descuento sobre el total a pagar. 
+X)  a) El importe total a pagar , bruto sin descuento y... 
+X)  b) el importe total a pagar con descuento(solo si corresponde)
+X)  d) Informar el tipo con mas cantidad de bolsas.
+X)  f) El tipo mas caro*/
+
 function mostrar()
 {
   let producto;
@@ -104,9 +116,32 @@ function mostrar()
 
 
 
-/*
-/* MAGALI GARCIA
- Realizar el algoritmo que permita ingresar los datos de una compra productos de la construccion, hasta que el cliente quiera:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MAGALI GARCIA
+Realizar el algoritmo que permita ingresar los datos de una compra productos de la construccion, hasta que el cliente quiera:
 Tipo validad("arena";"cal";"cemento")
 Cantidad de bolsas,
 Precio por bolsa (más de cero ),
@@ -192,5 +227,4 @@ function mostrar()
     }
     document.write("El tipo con mas cantidad de bolsas es: "+tipoMayorCantidadDeBolsas+"<br>");
     document.write("El tipo más caro es: "+tipoMasCaro);
-}// FIN DE LA FUNCION
-*/
+}// FIN DE LA FUNCION*/
