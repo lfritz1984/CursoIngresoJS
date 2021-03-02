@@ -19,28 +19,34 @@ function mostrar()
   let precioFinalconDescuento;
   let respuesta;
 
-  let acumuladorBolsasDeArena;
-  let acumuladorBolsasCal;
-  let acumuladorBolsasCemento;
+  let contadorBolsasDeArena;
+  let contadorBolsasCal;
+  let contadorBolsasCemento;
   let acumuladorTotaldeBolsas;
   let precioBrutoArena;
   let precioBrutoCal;
   let precioBrutoCemento;
+  let banderaArena;
+  let banderaCal;
+  let banderaCemento;
   
   let tipoConMasCantidadDeBolsas;
   let mayorCantidadDeBolsas;
   let tipoMasCaro;
   let bolsaMasCara;
 
-  acumuladorBolsasDeArena = 0;
-  acumuladorBolsasCal = 0;
-  acumuladorBolsasCemento = 0;
+  contadorBolsasDeArena = 0;
+  contadorBolsasCal = 0;
+  contadorBolsasCemento = 0;
   acumuladorTotaldeBolsas = 0;
   precioBrutoArena = 0;
   precioBrutoCal = 0;
   precioBrutoCemento = 0;
   bolsaMasCara = 0;
   mayorCantidadDeBolsas = 0;
+  banderaArena = true;
+  banderaCal = true;
+  banderaCemento = true;
   respuesta = "si";
 
   while(respuesta == "si")
@@ -68,16 +74,16 @@ function mostrar()
     switch(producto)
     {
       case "arena":
-        acumuladorBolsasDeArena = acumuladorBolsasDeArena + cantidadDeBolsas;
-        precioBrutoArena = acumuladorBolsasDeArena * precioPorBolsa;
+        contadorBolsasDeArena = contadorBolsasDeArena + cantidadDeBolsas;
+        precioBrutoArena = contadorBolsasDeArena * precioPorBolsa;
         break;
       case "cal":
-        acumuladorBolsasCal = acumuladorBolsasCal + cantidadDeBolsas;
-        precioBrutoCal = acumuladorBolsasCal * precioPorBolsa;
+        contadorBolsasCal = contadorBolsasCal + cantidadDeBolsas;
+        precioBrutoCal = contadorBolsasCal * precioPorBolsa;
         break;
        case "cemento":
-         acumuladorBolsasCemento = acumuladorBolsasCemento + cantidadDeBolsas;
-         precioBrutoCemento = acumuladorBolsasCemento * precioPorBolsa;
+         contadorBolsasCemento = contadorBolsasCemento + cantidadDeBolsas;
+         precioBrutoCemento = contadorBolsasCemento * precioPorBolsa;
          break;
     }
     if(mayorCantidadDeBolsas < cantidadDeBolsas)
@@ -93,7 +99,7 @@ function mostrar()
     respuesta = prompt("¿Desea seguir ingresando productos?, responda con: si ó no");
     respuesta = respuesta.toLocaleLowerCase();
   }
-  acumuladorTotaldeBolsas = acumuladorBolsasDeArena + acumuladorBolsasCal + acumuladorBolsasCemento;
+  acumuladorTotaldeBolsas = contadorBolsasDeArena + contadorBolsasCal + contadorBolsasCemento;
   precioBrutoTotal = precioBrutoArena + precioBrutoCal + precioBrutoCemento;
   document.write("Su total en bruto es: " + precioBrutoTotal + "<br>");
   if(acumuladorTotaldeBolsas > 10 && acumuladorTotaldeBolsas < 31)
