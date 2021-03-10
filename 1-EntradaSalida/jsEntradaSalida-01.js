@@ -43,25 +43,27 @@ function mostrar()
 	let nombreMasBaratoDeLosElaborados;
 	let contadorProductosElaborados;
 	let contadorProductosNacionalesConStock;
+	let contadorDeTodosLosProductos;
 	let acumuladorNacionalesConStock;
 	let  promedioNacionalesConStock;
 	
 	respuesta = "si";
 	precioDelMasBaratoDeLosElaborados = 0;
 	contadorProductosElaborados = 0;
-	contadorProductosNacionales = 0;
+	contadorProductosNacionalesConStock = 0;
+	contadorDeTodosLosProductos = 0;
 	acumuladorNacionalesConStock = 0;
 
 	while(respuesta=="si")
 	{
 		tipoProducto = prompt("Ingrese un tipo de producto: limpieza, comestible u otros");
-		tipoProducto = tipoProducto.toLocaleLowerCase();
+		tipoProducto = tipoProducto.toLowerCase();
 		while(isNaN(tipoProducto) == false || tipoProducto != "limpieza" && tipoProducto != "comestible" && tipoProducto != "otros")
 		{
 			tipoProducto = prompt("Error, reingrese un tipo de producto valido");
 		}
 		nombreDelProducto = prompt("Ingrese el nombre del producto")
-		nombreDelProducto = nombreDelProducto.toLocaleLowerCase();
+		nombreDelProducto = nombreDelProducto.toLowerCase();
 		while(isNaN(nombreDelProducto) == false)
 		{
 			nombreDelProducto = prompt("Error, reingrese un nombre valido");
@@ -74,13 +76,13 @@ function mostrar()
 			importeDelProducto = parseFloat(importeDelProducto);
 		}
 		tipoDeStockDelProducto = prompt("Ingrese un tipo de stock del producto:  pedido, sin stock o con stock");
-		tipoDeStockDelProducto = tipoDeStockDelProducto.toLocaleLowerCase();
+		tipoDeStockDelProducto = tipoDeStockDelProducto.toLowerCase();
 		while(isNaN(tipoDeStockDelProducto) == false)
 		{
 			tipoDeStockDelProducto = prompt("Error, reingrese un tipo de stock del producto");
 		}
 		precedenciaDelProducto = prompt("Ingrese la procedencia: importado, nacional o elaborado");
-		precedenciaDelProducto = precedenciaDelProducto.toLocaleLowerCase();
+		precedenciaDelProducto = precedenciaDelProducto.toLowerCase();
 		while(isNaN(precedenciaDelProducto) == false || precedenciaDelProducto != "importado" && precedenciaDelProducto != "nacional" && precedenciaDelProducto != "elaborado" )
 		{
 			precedenciaDelProducto = prompt("Error, reingrese una precedencia correcta");
@@ -99,25 +101,37 @@ function mostrar()
 				{
 					precioDelMasBaratoDeLosElaborados = importeDelProducto;
 					nombreMasBaratoDeLosElaborados = nombreDelProducto;
-					contadorProductosElaborados ++;
 				}
+				contadorProductosElaborados ++;
 				break;
 			case "nacional":
 				if(tipoDeStockDelProducto == "con stock")
 				{
-					acumuladorNacionalesConStock = acumuladorNacionalesConStock + importeDelProducto;
 					contadorProductosNacionalesConStock ++;
+					acumuladorNacionalesConStock = acumuladorNacionalesConStock + importeDelProducto;
 				}
 				break;
-
 		}
 
 		respuesta = prompt("Desea continuar ingresando productos?");
 		respuesta = respuesta.toLocaleLowerCase();
 
 	}
-	document.write(" El nombre del mas barato de los elaborados es: " + nombreMasBaratoDeLosElaborados + "<br");
-
 	promedioNacionalesConStock = acumuladorNacionalesConStock / contadorProductosNacionalesConStock;
-	alert("El promedio de productos nacionales con stock es: " + promedioNacionalesConStock);
+	if(contadorProductosElaborados > 0)
+	{
+		document.write(" El nombre del mas barato de los elaborados es: " + nombreMasBaratoDeLosElaborados + "<br");
+	}
+	else
+	{
+		document.write("No hay productos elaborados ingresados" + "<br>");
+	}
+	if(contadorProductosNacionalesConStock > 0)
+	{
+		document.write("El promedio de productos nacionales con stock es: " + promedioNacionalesConStock + "<br>");
+	}
+	else
+	{
+		document.write("No hay productos Nacionales con stock <br>");
+	}
 }
