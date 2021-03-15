@@ -132,6 +132,6 @@ function mostrar()
 	}
 	else
 	{
-		document.write("No hay productos Nacionales con stock <br>");
+	 document.write("No hay productos Nacionales con stock <br>");
 	}
 }
